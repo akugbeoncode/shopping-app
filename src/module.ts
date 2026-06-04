@@ -29,6 +29,7 @@ export class AppModule {
     async start() {
         if (!config.MONGO_URI) throw new Error("mongo uri must be defined!");
         if (!config.JWT_KEY) throw new Error("jwt secret must be defined!");
+        if (!config.STRIPE_KEY) throw new Error("Stripe key must be defined!");
 
         try {
             await mongoose.connect(config.MONGO_URI);

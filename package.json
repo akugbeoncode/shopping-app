@@ -5,26 +5,31 @@
   "type": "module",
   "main": "./dist/server.js",
   "scripts": {
+    "build": "tsc",
     "compile": "tsc && node ./dist/src/server.js",
-    "dev": "nodemon --watch src --ext ts --ignore dist --exec \"npm run compile\""
+    "dev": "nodemon --watch src --ext ts --ignore dist --exec \"npm run compile\"",
+    "start": "node ./dist/src/server.js"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@devshopapp/common": "^1.0.22",
+    "@devshopapp/common": "^1.0.30",
     "@types/cookie-session": "^2.0.49",
     "@types/cors": "^2.8.19",
     "@types/dotenv": "^6.1.1",
     "@types/express": "^5.0.6",
+    "@types/stripe": "^8.0.416",
     "cookie-session": "^2.1.1",
     "cors": "^2.8.6",
     "dotenv": "^17.4.2",
     "express": "^5.2.1",
-    "mongoose": "^9.6.3"
+    "mongoose": "^9.6.3",
+    "stripe": "^22.2.0"
   },
   "devDependencies": {
     "@types/multer": "^2.1.0",
     "multer": "^2.1.1",
-    "nodemon": "^3.1.14"
+    "nodemon": "^3.1.14",
+    "typescript": "^6.0.3"
   }
 }
